@@ -1,3 +1,4 @@
+//Bohdan Zui IM-65
 //Disc 1 Side A
 let inc = function(n){
     return n+1;
