@@ -27,6 +27,6 @@ for (const item of array) {
 
     if (type === "numbers") colivan.numbers++;
     if (type === "string") colivan.strings++;
-    if (type === "boolean") colivan.booleans+;
+    if (type === "boolean") colivan.booleans++;
 }
 console.dir(colivan)
