@@ -27,6 +27,21 @@ range = function(start, end){
 }
 console.dir(range(15,30));
 //Вкладені функції
+//СЕРЗНАЧ
 let average = function(a,b){
-
+    let c = (a+b)/2;
+    return c;
 }
+console.dir(average(50,100));
+//КВАДРАТ
+let square = function(x){
+    c = (x)**2;
+    return c;
+}
+console.dir(square(16));
+//cube
+let cube = function(x){
+    c = (x)**3;
+    return c;
+}
+console.dir(cube(3));
