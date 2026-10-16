@@ -33,15 +33,38 @@ let average = function(a,b){
     return c;
 }
 console.dir(average(50,100));
-//КВАДРАТ
+//КВАДРАТ МАЛЄВИЧА
 let square = function(x){
     c = (x)**2;
     return c;
 }
 console.dir(square(16));
-//cube
+//КУБ РУБІКА
 let cube = function(x){
     c = (x)**3;
     return c;
 }
 console.dir(cube(3));
+//Цирковний цикл
+circus=[];
+for(let i = 0; i < 10; i++){
+    let x =square(i);
+    let y =cube(i);
+    let z = average(x,y);
+    circus.push(z);
+
+}
+console.dir(circus);
+//Завд. 33 Об'єкти
+//Пункти вскпкдині якрїсь там функції мда
+let fn = function(){
+    const obj1 = {name: 'Gordon'}
+    let obj2 = {name: 'Freeman'}
+    obj1.name = 'Eli'
+    obj2.name = 'Vance'
+    //obj1 = { name: 'Isaac' }; TypeError: Assignment to constant variable.
+    obj2 = {name: 'Kleiner'};
+    return {obj1, obj2};
+}
+console.dir(fn());
+//
