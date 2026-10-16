@@ -14,19 +14,31 @@ inc = function(num){
 const obj = {n:5};
 inc(obj);
 console.dir(obj);
-//Disc 2 Side A
+//Disc 2 Side A STATIC SORTING
 const array =
     ['i love alcohol', 67, true,
-    Symbol('A'), null,[6,12,5], 1+5,0]
+    Symbol('A'), null,[6,12,5], 1+5,0,
+    function(n){return 0;}]
 const colivan = {
-    numbers: 0,
-    strings: 0,
-    booleans: 0}
+    number: 0,
+    string: 0,
+    boolean: 0,
+    object: 0,
+    symbol: 0,
+    function:0
+}
 for (const item of array) {
     const type = typeof item;
-
-    if (type === "numbers") colivan.numbers++;
-    if (type === "string") colivan.strings++;
-    if (type === "boolean") colivan.booleans++;
+    colivan[type]++;
 }
 console.dir(colivan)
+//Disk 2 Side B aka DYNAMIC SOMETHING
+const johnpork = {};
+for(const item of array){
+    const type = typeof item;
+    if(johnpork[type] === undefined){
+    johnpork[type] = 0;
+    }
+    johnpork[type]++;
+}
+console.dir(johnpork);
