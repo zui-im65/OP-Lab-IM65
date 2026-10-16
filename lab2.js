@@ -55,8 +55,15 @@ for(let i = 0; i < 10; i++){
 
 }
 console.dir(circus);
-//Завд. 33 Об'єкти
-//Пункти вскпкдині якрїсь там функції мда
+//Завд. 3 Об'єкти
+//Ми викликаємо console.dir(fn())
+//Воно запускає функцію fn()
+//В цій функції всередині є дві задані змінні
+//Константа obj1 і літерал obj2
+//Ми можем поміняти те що всередині поля name і там і там
+//Та от ми не можемо поміняти повністю вміст у константі
+//Тільки у літералі
+//Якщо ми міняємо в константі, воно все вилітає з помилкою
 let fn = function(){
     const obj1 = {name: 'Gordon'}
     let obj2 = {name: 'Freeman'}
@@ -67,4 +74,9 @@ let fn = function(){
     return {obj1, obj2};
 }
 console.dir(fn());
-//
+//Створення користувача
+let createUser = function(name, city){
+    entry = {name, city};
+    return entry;
+}
+console.dir(createUser("John Cena", "Bejiin"));
