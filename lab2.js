@@ -80,3 +80,26 @@ let createUser = function(name, city){
     return entry;
 }
 console.dir(createUser("John Cena", "Bejiin"));
+//Завд 4. Колекції
+//База дніпровського колцентру
+let phonebase = [
+{name: 'СБУ', phone:'+38044293899'},
+{name: 'Пшепшицька Килина', phone:'+38067676767'}
+]
+let findPhoneByName = function(name){
+    for(const item of phonebase){
+        if (item.name === name){
+            return item.phone;
+        }
+    }
+}
+console.dir(findPhoneByName('СБУ'));
+//Варіант другий з хешами
+phonebase = {
+    'СБУ': {phone: '+38044293899'},
+    'Пшепшицька Килина': {phone: '+38067676767'}
+}
+findPhoneByName = function(name){
+    return phonebase[name];
+}
+console.log(findPhoneByName('Пшепшицька Килина'))
