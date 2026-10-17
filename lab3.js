@@ -42,3 +42,23 @@ console.dir(transformIP("0.0.0.0"));
 console.dir(transformIP("8.8.8.8"));
 console.dir(transformIP("165.225.133.150"));
 //Інтроспектор
+const iface = {
+    m1: x => [x],
+    m2: function (x, y) {
+        return [x, y];
+    },
+    m3(x, y, z) {
+        return [x, y, z];
+    }
+}
+const introspectator = function(iface){
+    const output = [];
+    for (const key of Object.keys(iface)){
+        const value = iface[key];
+        if (typeof value === 'function'){
+            output.push([key, value.length]);
+        }
+    }
+    return output;
+}
+console.dir(introspectator(iface));
